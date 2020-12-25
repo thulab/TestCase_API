@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# TestCase_API
-=======
 
 # TestCase_API
 
@@ -37,4 +34,3 @@ Software Engineering Group
   
 
 
->>>>>>> api testCase
