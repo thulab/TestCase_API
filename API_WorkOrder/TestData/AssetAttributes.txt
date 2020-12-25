@@ -1,0 +1,17 @@
+assetName,设备名称,null,50,String
+assetType,设备类型,null,50,String
+workhour,工作小时数,null,9,Integer
+installationDate,安装时间,null,6,TimeStamp
+ownerName,业主名称,null,50,String
+loccationX,位置经度,null,15,Double
+locationY,位置纬度,null,15,Double
+workLoc,行政位置,null,500,String
+assetImg,设备照片,null,50,LocalFile
+assetIcon,设备图标,null,500,String
+assetState,设备状态,"已创建",20,String
+assetDesc,设备描述,null,500,String
+assetWoCount,当前工单数,0,9,Integer
+mileAge,总里程数,0,9,Integer
+alarmCount,总报警数,0,9,Integer
+mailEdge,总里程数,null,9,Integer
+failCount,总故障报警,null,9,Integer

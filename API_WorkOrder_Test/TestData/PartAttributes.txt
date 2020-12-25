@@ -1,0 +1,4 @@
+WorkOrder,名称,null,50,String
+partDesc,描述,null,500,String
+partImg,零件图片,null,50,LocalFile
+partType,零件类别,"零件",5,String

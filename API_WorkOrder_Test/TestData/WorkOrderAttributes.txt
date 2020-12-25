@@ -1,0 +1,8 @@
+woAsset,针对设备,null,32,UUID
+woPart,针对部位,null,32,UUID
+woTitle,工单标题,null,200,String
+woDesc,工单描述,null,500,String
+woState,工单状态,"已创建",10,String
+woEngineer,工程师,null,32,UUID
+woDeadline,截止日期,null,6,Date
+onsiteImg,现场照片,null,50,LocalFile
