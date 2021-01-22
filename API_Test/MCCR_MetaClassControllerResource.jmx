@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="3.1" jmeter="3.1 r1770033">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="MCCR_MetaClassControllerResource" enabled="true">
-      <stringProp name="TestPlan.comments">资源类模型元信息</stringProp>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="MCCR_MetaClassControllerResource" enabled="false">
+      <stringProp name="TestPlan.comments">资源类模型元信息--资源类不在维护</stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
@@ -22,6 +22,7 @@
         <stringProp name="HTTPSampler.protocol">http</stringProp>
         <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
         <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="TestPlan.comments">${ipAddress}</stringProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
       </ConfigTestElement>
       <hashTree/>
@@ -211,7 +212,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="MCCR_02_添加和删除资源类" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="MCCR_02_添加和删除资源类" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -226,6 +227,16 @@
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="Rname" elementType="Argument">
+              <stringProp name="Argument.name">Rname</stringProp>
+              <stringProp name="Argument.value">R${__time(,)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="MCCR_02_C01_dbtables" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -306,7 +317,7 @@
                 <stringProp name="Argument.value"> [&#xd;
  {&#xd;
       &quot;id&quot;: &quot;CB73E8485EB20042B0F0B2A5733EFAB4&quot;,&#xd;
-      &quot;className&quot;: &quot;R1s2c3CityTest&quot;,&#xd;
+      &quot;className&quot;: &quot;${Rname}&quot;,&#xd;
       &quot;displayName&quot;: &quot;资源城市测试&quot;,&#xd;
       &quot;classType&quot;: &quot;DynamicClass&quot;,&#xd;
       &quot;classCategory&quot;: &quot;ResourceClass&quot;,&#xd;
@@ -399,7 +410,7 @@
                 <stringProp name="Argument.value"> [&#xd;
  {&#xd;
       &quot;id&quot;: &quot;CB73E8485EB20042B0F0B2A5733EFAB4&quot;,&#xd;
-      &quot;className&quot;: &quot;R1s2c3CityTest&quot;,&#xd;
+      &quot;className&quot;: &quot;${Rname}&quot;,&#xd;
       &quot;displayName&quot;: &quot;资源城市测试&quot;,&#xd;
       &quot;classType&quot;: &quot;DynamicClass&quot;,&#xd;
       &quot;classCategory&quot;: &quot;ResourceClass&quot;,&#xd;
