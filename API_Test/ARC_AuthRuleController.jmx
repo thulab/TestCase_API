@@ -22,6 +22,7 @@
         <stringProp name="HTTPSampler.protocol">http</stringProp>
         <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
         <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="TestPlan.comments">${ipAddress}</stringProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
       </ConfigTestElement>
       <hashTree/>
@@ -2783,7 +2784,7 @@
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="message:" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="-1323939434">&quot;message&quot;:&quot;属性wen${attrName1}不存在&quot;</stringProp>
+              <stringProp name="-19308574">&quot;message&quot;:&quot;属性wen${attrName1}未与类${className}绑定&quot;</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>

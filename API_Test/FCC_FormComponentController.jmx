@@ -201,6 +201,12 @@
               <stringProp name="Argument.desc">表单控件英文名</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="GdisplayName2" elementType="Argument">
+              <stringProp name="Argument.name">GdisplayName2</stringProp>
+              <stringProp name="Argument.value">${__time(,)}</stringProp>
+              <stringProp name="Argument.desc">组名</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
@@ -579,7 +585,7 @@ if(infoArrays.length()&gt;=8){
                 <stringProp name="Argument.value">[&#xd;
   {&#xd;
     &quot;creator&quot;: &quot;&quot;,&#xd;
-    &quot;displayName&quot;: &quot;${groupDisplayName}&quot;,&#xd;
+    &quot;displayName&quot;: &quot;${GdisplayName2}&quot;,&#xd;
     &quot;isHidden&quot;: true,&#xd;
     &quot;isSystem&quot;: false,&#xd;
     &quot;lastModifier&quot;: &quot;&quot;,&#xd;
@@ -589,7 +595,7 @@ if(infoArrays.length()&gt;=8){
   },&#xd;
    {&#xd;
     &quot;creator&quot;: &quot;&quot;,&#xd;
-    &quot;displayName&quot;: &quot;${groupDisplayName}2&quot;,&#xd;
+    &quot;displayName&quot;: &quot;${GdisplayName2}2&quot;,&#xd;
     &quot;isHidden&quot;: false,&#xd;
     &quot;isSystem&quot;: false,&#xd;
     &quot;lastModifier&quot;: &quot;&quot;,&#xd;
