@@ -1444,7 +1444,7 @@
                 <stringProp name="Argument.value">[&#xd;
   {&#xd;
     &quot;attributeCategory&quot;: &quot;Variable&quot;,&#xd;
-    &quot;attributeName&quot;: &quot;1${__time(,)}&quot;,&#xd;
+    &quot;attributeName&quot;: &quot;a${__time(,)}&quot;,&#xd;
     &quot;defaultValue&quot;: 0,&#xd;
     &quot;displayName&quot;: &quot;属性1&quot;,&#xd;
     &quot;id&quot;: &quot;&quot;,&#xd;
@@ -1454,7 +1454,7 @@
   },&#xd;
   {&#xd;
     &quot;attributeCategory&quot;: &quot;Variable&quot;,&#xd;
-    &quot;attributeName&quot;: &quot;2${__time(,)}&quot;,&#xd;
+    &quot;attributeName&quot;: &quot;b${__time(,)}&quot;,&#xd;
     &quot;defaultValue&quot;: 0,&#xd;
     &quot;displayName&quot;: &quot;属性2&quot;,&#xd;
     &quot;id&quot;: &quot;&quot;,&#xd;
