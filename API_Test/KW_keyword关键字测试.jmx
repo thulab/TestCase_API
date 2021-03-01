@@ -947,7 +947,7 @@ vars.put(&quot;authority&quot;,authority);</stringProp>
               <stringProp name="111421">pwd</stringProp>
             </collectionProp>
             <collectionProp name="UserParameters.thread_values">
-              <collectionProp name="1183986314">
+              <collectionProp name="740465218">
                 <stringProp name="3392903">null</stringProp>
                 <stringProp name="-1848419744">123@qwe1</stringProp>
               </collectionProp>
@@ -1052,7 +1052,7 @@ vars.put(&quot;authority&quot;,authority);</stringProp>
               <stringProp name="111421">pwd</stringProp>
             </collectionProp>
             <collectionProp name="UserParameters.thread_values">
-              <collectionProp name="-344260414">
+              <collectionProp name="-787781510">
                 <stringProp name="3392903">null</stringProp>
                 <stringProp name="2018583537">123@qwe</stringProp>
               </collectionProp>
@@ -2267,7 +2267,7 @@ vars.put(&quot;authority&quot;,authority);</stringProp>
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="KW_04_S02_objects-create-withEntityObj" enabled="false">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="KW_04_S02_objects-create-withEntityObj" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -2302,7 +2302,7 @@ vars.put(&quot;authority&quot;,authority);</stringProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <boolProp name="HTTPSampler.monitor">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="TestPlan.comments">批量新增关联类对象,同时增加左右类--接口已删除21/2/27</stringProp>
+          <stringProp name="TestPlan.comments">批量新增关联类对象,同时增加左右类</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ResponseCode200" enabled="true">
@@ -2365,7 +2365,7 @@ vars.put(&quot;authority&quot;,authority);</stringProp>
           </RegexExtractor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="KW_05_S06_objects-update-withEntityObj" enabled="false">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="KW_05_S06_objects-update-withEntityObj" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -2401,7 +2401,7 @@ vars.put(&quot;authority&quot;,authority);</stringProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <boolProp name="HTTPSampler.monitor">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="TestPlan.comments">批量新增关联类对象--接口已删除21/2/27</stringProp>
+          <stringProp name="TestPlan.comments">批量新增关联类对象</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ResponseCode200" enabled="true">
@@ -2471,7 +2471,7 @@ vars.put(&quot;authority&quot;,authority);</stringProp>
           </BeanShellPostProcessor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="KW_010_C01_objects/oids" enabled="false">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="KW_010_C01_objects/oids" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -2498,7 +2498,7 @@ vars.put(&quot;authority&quot;,authority);</stringProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <boolProp name="HTTPSampler.monitor">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="TestPlan.comments">根据oids获取关联类的对象--由于上面接口删除，去掉此样例</stringProp>
+          <stringProp name="TestPlan.comments">根据oids获取关联类的对象</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ResponseCode200" enabled="true">
