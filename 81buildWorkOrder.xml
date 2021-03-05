@@ -24,7 +24,8 @@
     <target name="test">
 		<taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask" />
         <jmeter jmeterhome="${jmeter.home}" resultlog="${jmeter.result.jtlName}">
-            <testplans dir="API_WorkOrder/" includes="*.jmx" />
+             <testplans dir="API_WorkOrder/" includes="uploadWf.jmx" />
+            <testplans dir="API_WorkOrder/" includes="AssetManage.jmx" />
 
              <property name="jmeter.save.saveservice.output_format" value="xml"/>
         </jmeter>
