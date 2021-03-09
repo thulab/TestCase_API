@@ -17,14 +17,23 @@
 	<property name="jmeter.result.htmlNamedetail" value="${jmeter.result.html.dir}/${Detail}${ReportName}.html" />
     
     <target name="run">
+        <antcall target="uploadwf" />
         <antcall target="test" />
         <antcall target="report" />
     </target>
-    
+    <target name="uploadwf">
+        <taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask" />
+        <jmeter jmeterhome="${jmeter.home}" resultlog="${jmeter.result.jtlName}">
+            <testplans dir="API_WorkOrder/" includes="uploadWf.jmx" />
+           
+            
+            <property name="jmeter.save.saveservice.output_format" value="xml"/>
+        </jmeter>
+    </target>
     <target name="test">
 		<taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask" />
         <jmeter jmeterhome="${jmeter.home}" resultlog="${jmeter.result.jtlName}">
-             <testplans dir="API_WorkOrder/" includes="uploadWf.jmx" />
+            
             <testplans dir="API_WorkOrder/" includes="AssetManage.jmx" />
 
              <property name="jmeter.save.saveservice.output_format" value="xml"/>
