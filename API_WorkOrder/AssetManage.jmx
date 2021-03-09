@@ -33,7 +33,7 @@
         <stringProp name="HTTPSampler.protocol">http</stringProp>
         <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
         <stringProp name="HTTPSampler.path"></stringProp>
-        <stringProp name="TestPlan.comments">192.168.31.51, ${assetIp}</stringProp>
+        <stringProp name="TestPlan.comments">192.168.31.51, </stringProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
         <stringProp name="HTTPSampler.connect_timeout"></stringProp>
         <stringProp name="HTTPSampler.response_timeout"></stringProp>
@@ -159,7 +159,7 @@
         </IncludeController>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="插件安装" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="插件安装" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -172,7 +172,7 @@
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
-        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Include Controller" enabled="false">
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Include Controller" enabled="true">
           <stringProp name="IncludeController.includepath">../data/uploadWf.jmx</stringProp>
         </IncludeController>
         <hashTree/>
@@ -3227,6 +3227,123 @@ ${__setProperty(module3,${module3},)}</stringProp>
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_16保存一个流程模版（无表单）" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;id&quot;:&quot;${templateId1}&quot;,&quot;code&quot;:&quot;0000000186&quot;,&quot;name&quot;:&quot;工单管理&quot;,&quot;processType&quot;:0,&quot;workflowType&quot;:2,&quot;authorId&quot;:&quot;${userId}&quot;,&quot;author&quot;:&quot;admin&quot;,&quot;description&quot;:null,&quot;keywords&quot;:null,&quot;lastupdate&quot;:${__time(,)},&quot;parent&quot;:&quot;000000R&quot;,&quot;owner&quot;:null,&quot;children&quot;:[{&quot;id&quot;:&quot;48F1C0BB58D46F4D8476CA30098C1648&quot;,&quot;name&quot;:&quot;currentProcess&quot;,&quot;orderNumber&quot;:1,&quot;description&quot;:&quot;当前流程&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;9FFF098856DA2343A876BAF211D9980C&quot;,&quot;name&quot;:&quot;oid&quot;,&quot;orderNumber&quot;:2,&quot;description&quot;:&quot;全局唯一标识&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;112BF7F620407845B8077730582EE22C&quot;,&quot;name&quot;:&quot;owner&quot;,&quot;orderNumber&quot;:3,&quot;description&quot;:&quot;拥有者&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;BB5875755869D9479418491A54AA6495&quot;,&quot;name&quot;:&quot;id&quot;,&quot;orderNumber&quot;:4,&quot;description&quot;:&quot;代号&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;0A47385CAB7DCE42BCE79A76CC8BB166&quot;,&quot;name&quot;:&quot;lastModifyTime&quot;,&quot;orderNumber&quot;:5,&quot;description&quot;:&quot;最近更新时间&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;CBF8B1C49FCC644EBEE876B0F7173947&quot;,&quot;name&quot;:&quot;lastModifier&quot;,&quot;orderNumber&quot;:6,&quot;description&quot;:&quot;最近更新人&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;858ED67DB814E942B44253D56CB978E4&quot;,&quot;name&quot;:&quot;createTime&quot;,&quot;orderNumber&quot;:7,&quot;description&quot;:&quot;创建时间&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;CD07BB3F4972C6428E01F4FB60FB043F&quot;,&quot;name&quot;:&quot;creator&quot;,&quot;orderNumber&quot;:8,&quot;description&quot;:&quot;创建人&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;B90F71C9D2788840ADE58F356FFC0BA4&quot;,&quot;name&quot;:&quot;woAsset&quot;,&quot;orderNumber&quot;:9,&quot;description&quot;:&quot;针对设备&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;F392444D9432494A80CA2818FC616DB3&quot;,&quot;name&quot;:&quot;woPart&quot;,&quot;orderNumber&quot;:10,&quot;description&quot;:&quot;针对部位&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;CA474A3C50CD934889C9E19E47D09D53&quot;,&quot;name&quot;:&quot;woTitle&quot;,&quot;orderNumber&quot;:11,&quot;description&quot;:&quot;工单标题&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;74BCC0B41720F64C8D529E9F896BF53C&quot;,&quot;name&quot;:&quot;woDesc&quot;,&quot;orderNumber&quot;:12,&quot;description&quot;:&quot;工单描述&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;EB9F91A948C58E4CAF05C81B0167F299&quot;,&quot;name&quot;:&quot;woState&quot;,&quot;orderNumber&quot;:13,&quot;description&quot;:&quot;工单状态&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;0B33C2CCE9C49A4CAA922423DC3209D8&quot;,&quot;name&quot;:&quot;woEngineer&quot;,&quot;orderNumber&quot;:14,&quot;description&quot;:&quot;工程师&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;240D9C54E2AD2C4AA94BE3885F2E8336&quot;,&quot;name&quot;:&quot;woDeadline&quot;,&quot;orderNumber&quot;:15,&quot;description&quot;:&quot;截止日期&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;00000000000004PY&quot;,&quot;name&quot;:&quot;起点&quot;,&quot;x0&quot;:38.5,&quot;y0&quot;:60.5,&quot;x1&quot;:86.5,&quot;y1&quot;:108.5,&quot;description&quot;:null,&quot;isParallelOutput&quot;:0,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;inputs&quot;:[],&quot;outputs&quot;:[{&quot;id&quot;:&quot;00000000000004Pd&quot;,&quot;name&quot;:&quot;连接0&quot;,&quot;orderNumber&quot;:0,&quot;description&quot;:null,&quot;status&quot;:0,&quot;x0&quot;:0,&quot;y0&quot;:0,&quot;x1&quot;:0,&quot;y1&quot;:0,&quot;source&quot;:&quot;00000000000004PY&quot;,&quot;target&quot;:&quot;00000000000004PZ&quot;,&quot;navigationRule&quot;:null,&quot;alwaysTrue&quot;:true,&quot;bendpoints&quot;:null,&quot;selected&quot;:false,&quot;points&quot;:[],&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;a&quot;:null,&quot;b&quot;:null,&quot;c&quot;:null}],&quot;accessibleVars&quot;:[{&quot;varId&quot;:&quot;48F1C0BB58D46F4D8476CA30098C1648&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;currentProcess&quot;},{&quot;varId&quot;:&quot;9FFF098856DA2343A876BAF211D9980C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;oid&quot;},{&quot;varId&quot;:&quot;112BF7F620407845B8077730582EE22C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;owner&quot;},{&quot;varId&quot;:&quot;BB5875755869D9479418491A54AA6495&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;id&quot;},{&quot;varId&quot;:&quot;0A47385CAB7DCE42BCE79A76CC8BB166&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifyTime&quot;},{&quot;varId&quot;:&quot;CBF8B1C49FCC644EBEE876B0F7173947&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifier&quot;},{&quot;varId&quot;:&quot;858ED67DB814E942B44253D56CB978E4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;createTime&quot;},{&quot;varId&quot;:&quot;CD07BB3F4972C6428E01F4FB60FB043F&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;creator&quot;},{&quot;varId&quot;:&quot;B90F71C9D2788840ADE58F356FFC0BA4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woAsset&quot;},{&quot;varId&quot;:&quot;F392444D9432494A80CA2818FC616DB3&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woPart&quot;},{&quot;varId&quot;:&quot;CA474A3C50CD934889C9E19E47D09D53&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woTitle&quot;},{&quot;varId&quot;:&quot;74BCC0B41720F64C8D529E9F896BF53C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDesc&quot;},{&quot;varId&quot;:&quot;EB9F91A948C58E4CAF05C81B0167F299&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woState&quot;},{&quot;varId&quot;:&quot;0B33C2CCE9C49A4CAA922423DC3209D8&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woEngineer&quot;},{&quot;varId&quot;:&quot;240D9C54E2AD2C4AA94BE3885F2E8336&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDeadline&quot;}],&quot;marks&quot;:[],&quot;classtypename&quot;:&quot;StartPoint&quot;,&quot;lastupdate&quot;:&quot;2019-12-31 10:46:29&quot;,&quot;status&quot;:0,&quot;launchUIType&quot;:0,&quot;launchFormContent&quot;:null,&quot;launchFormName&quot;:&quot;&quot;,&quot;launchUIUrl&quot;:null,&quot;startOperation&quot;:null},{&quot;id&quot;:&quot;00000000000004PZ&quot;,&quot;name&quot;:&quot;下单&quot;,&quot;x0&quot;:160.5,&quot;y0&quot;:22.5,&quot;x1&quot;:328.5,&quot;y1&quot;:150.5,&quot;status&quot;:0,&quot;description&quot;:null,&quot;isParallelInput&quot;:0,&quot;isParallelOutput&quot;:0,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;inputs&quot;:[],&quot;outputs&quot;:[{&quot;id&quot;:&quot;00000000000004Pe&quot;,&quot;name&quot;:&quot;连接0&quot;,&quot;orderNumber&quot;:0,&quot;description&quot;:null,&quot;status&quot;:0,&quot;x0&quot;:0,&quot;y0&quot;:0,&quot;x1&quot;:0,&quot;y1&quot;:0,&quot;source&quot;:&quot;00000000000004PZ&quot;,&quot;target&quot;:&quot;00000000000004Pa&quot;,&quot;navigationRule&quot;:&quot;V@EB9F91A948C58E4CAF05C81B0167F299@DataVariable#==#C@String@已创建&quot;,&quot;alwaysTrue&quot;:false,&quot;bendpoints&quot;:null,&quot;selected&quot;:false,&quot;points&quot;:[],&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;a&quot;:null,&quot;b&quot;:null,&quot;c&quot;:null},{&quot;id&quot;:&quot;00000000000004Pf&quot;,&quot;name&quot;:&quot;连接1&quot;,&quot;orderNumber&quot;:1,&quot;description&quot;:null,&quot;status&quot;:0,&quot;x0&quot;:0,&quot;y0&quot;:0,&quot;x1&quot;:0,&quot;y1&quot;:0,&quot;source&quot;:&quot;00000000000004PZ&quot;,&quot;target&quot;:&quot;00000000000004Pb&quot;,&quot;navigationRule&quot;:&quot;V@EB9F91A948C58E4CAF05C81B0167F299@DataVariable#!=#C@String@已创建&quot;,&quot;alwaysTrue&quot;:false,&quot;bendpoints&quot;:null,&quot;selected&quot;:false,&quot;points&quot;:[],&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;a&quot;:null,&quot;b&quot;:null,&quot;c&quot;:null}],&quot;marks&quot;:[],&quot;classtypename&quot;:&quot;ManualTask&quot;,&quot;lastupdate&quot;:&quot;2019-12-27 16:30:27&quot;,&quot;accessibleVars&quot;:[{&quot;varId&quot;:&quot;48F1C0BB58D46F4D8476CA30098C1648&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;currentProcess&quot;},{&quot;varId&quot;:&quot;9FFF098856DA2343A876BAF211D9980C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;oid&quot;},{&quot;varId&quot;:&quot;112BF7F620407845B8077730582EE22C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;owner&quot;},{&quot;varId&quot;:&quot;BB5875755869D9479418491A54AA6495&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;id&quot;},{&quot;varId&quot;:&quot;0A47385CAB7DCE42BCE79A76CC8BB166&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifyTime&quot;},{&quot;varId&quot;:&quot;CBF8B1C49FCC644EBEE876B0F7173947&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifier&quot;},{&quot;varId&quot;:&quot;858ED67DB814E942B44253D56CB978E4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;createTime&quot;},{&quot;varId&quot;:&quot;CD07BB3F4972C6428E01F4FB60FB043F&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;creator&quot;},{&quot;varId&quot;:&quot;B90F71C9D2788840ADE58F356FFC0BA4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woAsset&quot;},{&quot;varId&quot;:&quot;F392444D9432494A80CA2818FC616DB3&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woPart&quot;},{&quot;varId&quot;:&quot;CA474A3C50CD934889C9E19E47D09D53&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woTitle&quot;},{&quot;varId&quot;:&quot;74BCC0B41720F64C8D529E9F896BF53C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDesc&quot;},{&quot;varId&quot;:&quot;EB9F91A948C58E4CAF05C81B0167F299&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woState&quot;},{&quot;varId&quot;:&quot;0B33C2CCE9C49A4CAA922423DC3209D8&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woEngineer&quot;},{&quot;varId&quot;:&quot;240D9C54E2AD2C4AA94BE3885F2E8336&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDeadline&quot;}],&quot;participants&quot;:[{&quot;participantType&quot;:&quot;launcher&quot;,&quot;name&quot;:&quot;&quot;,&quot;oid&quot;:&quot;&quot;}],&quot;deadlineDays&quot;:-1,&quot;alarmDays&quot;:-1,&quot;alarmFrequency&quot;:0,&quot;alarmMethod&quot;:0,&quot;uiType&quot;:0,&quot;uiUrl&quot;:null,&quot;formContent&quot;:null,&quot;formName&quot;:&quot;SingleWO&quot;,&quot;beforeOperation&quot;:null,&quot;afterOperation&quot;:null,&quot;expiryHandlerWfProcessId&quot;:null},{&quot;id&quot;:&quot;00000000000004Pa&quot;,&quot;name&quot;:&quot;执行&quot;,&quot;x0&quot;:387.5,&quot;y0&quot;:15.5,&quot;x1&quot;:555.5,&quot;y1&quot;:143.5,&quot;status&quot;:0,&quot;description&quot;:null,&quot;isParallelInput&quot;:0,&quot;isParallelOutput&quot;:0,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;inputs&quot;:[],&quot;outputs&quot;:[{&quot;id&quot;:&quot;00000000000004Pg&quot;,&quot;name&quot;:&quot;连接0&quot;,&quot;orderNumber&quot;:0,&quot;description&quot;:null,&quot;status&quot;:0,&quot;x0&quot;:0,&quot;y0&quot;:0,&quot;x1&quot;:0,&quot;y1&quot;:0,&quot;source&quot;:&quot;00000000000004Pa&quot;,&quot;target&quot;:&quot;00000000000004Pb&quot;,&quot;navigationRule&quot;:null,&quot;alwaysTrue&quot;:true,&quot;bendpoints&quot;:null,&quot;selected&quot;:false,&quot;points&quot;:[],&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;a&quot;:null,&quot;b&quot;:null,&quot;c&quot;:null}],&quot;marks&quot;:[],&quot;classtypename&quot;:&quot;ManualTask&quot;,&quot;lastupdate&quot;:1577937491554,&quot;accessibleVars&quot;:[{&quot;varId&quot;:&quot;48F1C0BB58D46F4D8476CA30098C1648&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;currentProcess&quot;},{&quot;varId&quot;:&quot;9FFF098856DA2343A876BAF211D9980C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;oid&quot;},{&quot;varId&quot;:&quot;112BF7F620407845B8077730582EE22C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;owner&quot;},{&quot;varId&quot;:&quot;BB5875755869D9479418491A54AA6495&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;id&quot;},{&quot;varId&quot;:&quot;0A47385CAB7DCE42BCE79A76CC8BB166&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifyTime&quot;},{&quot;varId&quot;:&quot;CBF8B1C49FCC644EBEE876B0F7173947&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifier&quot;},{&quot;varId&quot;:&quot;858ED67DB814E942B44253D56CB978E4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;createTime&quot;},{&quot;varId&quot;:&quot;CD07BB3F4972C6428E01F4FB60FB043F&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;creator&quot;},{&quot;varId&quot;:&quot;B90F71C9D2788840ADE58F356FFC0BA4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woAsset&quot;},{&quot;varId&quot;:&quot;F392444D9432494A80CA2818FC616DB3&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woPart&quot;},{&quot;varId&quot;:&quot;CA474A3C50CD934889C9E19E47D09D53&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woTitle&quot;},{&quot;varId&quot;:&quot;74BCC0B41720F64C8D529E9F896BF53C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDesc&quot;},{&quot;varId&quot;:&quot;EB9F91A948C58E4CAF05C81B0167F299&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woState&quot;},{&quot;varId&quot;:&quot;0B33C2CCE9C49A4CAA922423DC3209D8&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woEngineer&quot;},{&quot;varId&quot;:&quot;240D9C54E2AD2C4AA94BE3885F2E8336&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDeadline&quot;}],&quot;participants&quot;:[{&quot;participantType&quot;:&quot;group&quot;,&quot;name&quot;:&quot;维修工程师&quot;,&quot;oid&quot;:&quot;${lsuserGroup}&quot;}],&quot;deadlineDays&quot;:-1,&quot;alarmDays&quot;:-1,&quot;alarmFrequency&quot;:0,&quot;alarmMethod&quot;:0,&quot;uiType&quot;:0,&quot;uiUrl&quot;:null,&quot;formContent&quot;:null,&quot;formName&quot;:&quot;SingleWO&quot;,&quot;beforeOperation&quot;:null,&quot;afterOperation&quot;:null,&quot;expiryHandlerWfProcessId&quot;:null},{&quot;id&quot;:&quot;00000000000004Pb&quot;,&quot;name&quot;:&quot;存档&quot;,&quot;x0&quot;:394.5,&quot;y0&quot;:162.5,&quot;x1&quot;:562.5,&quot;y1&quot;:290.5,&quot;status&quot;:0,&quot;description&quot;:null,&quot;isParallelInput&quot;:0,&quot;isParallelOutput&quot;:0,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;inputs&quot;:[],&quot;outputs&quot;:[{&quot;id&quot;:&quot;00000000000004Ph&quot;,&quot;name&quot;:&quot;连接0&quot;,&quot;orderNumber&quot;:0,&quot;description&quot;:null,&quot;status&quot;:0,&quot;x0&quot;:0,&quot;y0&quot;:0,&quot;x1&quot;:0,&quot;y1&quot;:0,&quot;source&quot;:&quot;00000000000004Pb&quot;,&quot;target&quot;:&quot;00000000000004Pc&quot;,&quot;navigationRule&quot;:null,&quot;alwaysTrue&quot;:true,&quot;bendpoints&quot;:null,&quot;selected&quot;:false,&quot;points&quot;:[],&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;a&quot;:null,&quot;b&quot;:null,&quot;c&quot;:null}],&quot;marks&quot;:[],&quot;classtypename&quot;:&quot;ManualTask&quot;,&quot;lastupdate&quot;:1577937499443,&quot;accessibleVars&quot;:[{&quot;varId&quot;:&quot;48F1C0BB58D46F4D8476CA30098C1648&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;currentProcess&quot;},{&quot;varId&quot;:&quot;9FFF098856DA2343A876BAF211D9980C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;oid&quot;},{&quot;varId&quot;:&quot;112BF7F620407845B8077730582EE22C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;owner&quot;},{&quot;varId&quot;:&quot;BB5875755869D9479418491A54AA6495&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;id&quot;},{&quot;varId&quot;:&quot;0A47385CAB7DCE42BCE79A76CC8BB166&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifyTime&quot;},{&quot;varId&quot;:&quot;CBF8B1C49FCC644EBEE876B0F7173947&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifier&quot;},{&quot;varId&quot;:&quot;858ED67DB814E942B44253D56CB978E4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;createTime&quot;},{&quot;varId&quot;:&quot;CD07BB3F4972C6428E01F4FB60FB043F&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;creator&quot;},{&quot;varId&quot;:&quot;B90F71C9D2788840ADE58F356FFC0BA4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woAsset&quot;},{&quot;varId&quot;:&quot;F392444D9432494A80CA2818FC616DB3&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woPart&quot;},{&quot;varId&quot;:&quot;CA474A3C50CD934889C9E19E47D09D53&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woTitle&quot;},{&quot;varId&quot;:&quot;74BCC0B41720F64C8D529E9F896BF53C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDesc&quot;},{&quot;varId&quot;:&quot;EB9F91A948C58E4CAF05C81B0167F299&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woState&quot;},{&quot;varId&quot;:&quot;0B33C2CCE9C49A4CAA922423DC3209D8&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woEngineer&quot;},{&quot;varId&quot;:&quot;240D9C54E2AD2C4AA94BE3885F2E8336&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDeadline&quot;}],&quot;participants&quot;:[{&quot;participantType&quot;:&quot;user&quot;,&quot;name&quot;:&quot;王五&quot;,&quot;oid&quot;:&quot;${wwuserId}&quot;}],&quot;deadlineDays&quot;:-1,&quot;alarmDays&quot;:-1,&quot;alarmFrequency&quot;:0,&quot;alarmMethod&quot;:0,&quot;uiType&quot;:0,&quot;uiUrl&quot;:null,&quot;formContent&quot;:null,&quot;formName&quot;:&quot;SingleWO&quot;,&quot;beforeOperation&quot;:null,&quot;afterOperation&quot;:null,&quot;expiryHandlerWfProcessId&quot;:null},{&quot;id&quot;:&quot;00000000000004Pc&quot;,&quot;name&quot;:&quot;终点&quot;,&quot;x0&quot;:648.5,&quot;y0&quot;:196.5,&quot;x1&quot;:696.5,&quot;y1&quot;:244.5,&quot;status&quot;:0,&quot;description&quot;:null,&quot;isParallelInput&quot;:0,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;inputs&quot;:[],&quot;outputs&quot;:[],&quot;accessibleVars&quot;:[{&quot;varId&quot;:&quot;48F1C0BB58D46F4D8476CA30098C1648&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;currentProcess&quot;},{&quot;varId&quot;:&quot;9FFF098856DA2343A876BAF211D9980C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;oid&quot;},{&quot;varId&quot;:&quot;112BF7F620407845B8077730582EE22C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;owner&quot;},{&quot;varId&quot;:&quot;BB5875755869D9479418491A54AA6495&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;id&quot;},{&quot;varId&quot;:&quot;0A47385CAB7DCE42BCE79A76CC8BB166&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifyTime&quot;},{&quot;varId&quot;:&quot;CBF8B1C49FCC644EBEE876B0F7173947&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifier&quot;},{&quot;varId&quot;:&quot;858ED67DB814E942B44253D56CB978E4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;createTime&quot;},{&quot;varId&quot;:&quot;CD07BB3F4972C6428E01F4FB60FB043F&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;creator&quot;},{&quot;varId&quot;:&quot;B90F71C9D2788840ADE58F356FFC0BA4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woAsset&quot;},{&quot;varId&quot;:&quot;F392444D9432494A80CA2818FC616DB3&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woPart&quot;},{&quot;varId&quot;:&quot;CA474A3C50CD934889C9E19E47D09D53&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woTitle&quot;},{&quot;varId&quot;:&quot;74BCC0B41720F64C8D529E9F896BF53C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDesc&quot;},{&quot;varId&quot;:&quot;EB9F91A948C58E4CAF05C81B0167F299&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woState&quot;},{&quot;varId&quot;:&quot;0B33C2CCE9C49A4CAA922423DC3209D8&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woEngineer&quot;},{&quot;varId&quot;:&quot;240D9C54E2AD2C4AA94BE3885F2E8336&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDeadline&quot;}],&quot;marks&quot;:[],&quot;classtypename&quot;:&quot;EndPoint&quot;,&quot;lastupdate&quot;:&quot;2019-12-27 16:28:58&quot;,&quot;endUIType&quot;:0,&quot;endUIUrl&quot;:null,&quot;endFormContent&quot;:null,&quot;endFormName&quot;:&quot;MultiWO&quot;,&quot;endOperation&quot;:null}],&quot;classtypename&quot;:&quot;WfProcess&quot;,&quot;status&quot;:0,&quot;bindEnClassName&quot;:&quot;${className}&quot;,&quot;proprietors&quot;:null}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/buildtime/save-process-template</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+              <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
+              <stringProp name="1269965985">&quot;message&quot;:&quot;OK&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_17发布一个流程流程模版（无表单）" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;templateId&quot;:&quot;${templateId1}&quot;,&#xd;
+	&quot;version&quot;:&quot;2.0&quot;,&#xd;
+	&quot;description&quot;:&quot;开始节点无起始表单&quot;,&#xd;
+	&quot;releaser&quot;:&quot;admin&quot;,&#xd;
+	&quot;releaserId&quot;:&quot;9C92E891E9AE534DB685737DE467A9D0&quot;&#xd;
+	}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">dwf/v1/workflow/buildtime/release-process-template</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+              <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
+              <stringProp name="-145575042">&quot;data&quot;:&quot;${reltemplateId2}&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="reltemplateId2提取器" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">reltemplateId2</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="reltemplateId2 后置处理程序" enabled="true">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters">${reltemplateId2}</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">${__setProperty(reltemplateId2,${reltemplateId2},)}</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_14保存一个流程模版(有表单 ls权限）" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -3342,123 +3459,6 @@ ${__setProperty(module3,${module3},)}</stringProp>
             <stringProp name="parameters">${reltemplateId1}</stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="script">${__setProperty(reltemplateId1,${reltemplateId1},)}</stringProp>
-          </BeanShellPostProcessor>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_16保存一个流程模版（无表单）" enabled="true">
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;id&quot;:&quot;${templateId1}&quot;,&quot;code&quot;:&quot;0000000186&quot;,&quot;name&quot;:&quot;工单管理&quot;,&quot;processType&quot;:0,&quot;workflowType&quot;:2,&quot;authorId&quot;:&quot;${userId}&quot;,&quot;author&quot;:&quot;admin&quot;,&quot;description&quot;:null,&quot;keywords&quot;:null,&quot;lastupdate&quot;:${__time(,)},&quot;parent&quot;:&quot;000000R&quot;,&quot;owner&quot;:null,&quot;children&quot;:[{&quot;id&quot;:&quot;48F1C0BB58D46F4D8476CA30098C1648&quot;,&quot;name&quot;:&quot;currentProcess&quot;,&quot;orderNumber&quot;:1,&quot;description&quot;:&quot;当前流程&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;9FFF098856DA2343A876BAF211D9980C&quot;,&quot;name&quot;:&quot;oid&quot;,&quot;orderNumber&quot;:2,&quot;description&quot;:&quot;全局唯一标识&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;112BF7F620407845B8077730582EE22C&quot;,&quot;name&quot;:&quot;owner&quot;,&quot;orderNumber&quot;:3,&quot;description&quot;:&quot;拥有者&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;BB5875755869D9479418491A54AA6495&quot;,&quot;name&quot;:&quot;id&quot;,&quot;orderNumber&quot;:4,&quot;description&quot;:&quot;代号&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;0A47385CAB7DCE42BCE79A76CC8BB166&quot;,&quot;name&quot;:&quot;lastModifyTime&quot;,&quot;orderNumber&quot;:5,&quot;description&quot;:&quot;最近更新时间&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;CBF8B1C49FCC644EBEE876B0F7173947&quot;,&quot;name&quot;:&quot;lastModifier&quot;,&quot;orderNumber&quot;:6,&quot;description&quot;:&quot;最近更新人&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;858ED67DB814E942B44253D56CB978E4&quot;,&quot;name&quot;:&quot;createTime&quot;,&quot;orderNumber&quot;:7,&quot;description&quot;:&quot;创建时间&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;CD07BB3F4972C6428E01F4FB60FB043F&quot;,&quot;name&quot;:&quot;creator&quot;,&quot;orderNumber&quot;:8,&quot;description&quot;:&quot;创建人&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;B90F71C9D2788840ADE58F356FFC0BA4&quot;,&quot;name&quot;:&quot;woAsset&quot;,&quot;orderNumber&quot;:9,&quot;description&quot;:&quot;针对设备&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;F392444D9432494A80CA2818FC616DB3&quot;,&quot;name&quot;:&quot;woPart&quot;,&quot;orderNumber&quot;:10,&quot;description&quot;:&quot;针对部位&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;CA474A3C50CD934889C9E19E47D09D53&quot;,&quot;name&quot;:&quot;woTitle&quot;,&quot;orderNumber&quot;:11,&quot;description&quot;:&quot;工单标题&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;74BCC0B41720F64C8D529E9F896BF53C&quot;,&quot;name&quot;:&quot;woDesc&quot;,&quot;orderNumber&quot;:12,&quot;description&quot;:&quot;工单描述&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;EB9F91A948C58E4CAF05C81B0167F299&quot;,&quot;name&quot;:&quot;woState&quot;,&quot;orderNumber&quot;:13,&quot;description&quot;:&quot;工单状态&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;0B33C2CCE9C49A4CAA922423DC3209D8&quot;,&quot;name&quot;:&quot;woEngineer&quot;,&quot;orderNumber&quot;:14,&quot;description&quot;:&quot;工程师&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;240D9C54E2AD2C4AA94BE3885F2E8336&quot;,&quot;name&quot;:&quot;woDeadline&quot;,&quot;orderNumber&quot;:15,&quot;description&quot;:&quot;截止日期&quot;,&quot;value&quot;:&quot;C@String@&quot;,&quot;classtypename&quot;:&quot;DataVariable&quot;,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;00000000000001R&quot;,&quot;datatype&quot;:&quot;String&quot;},{&quot;id&quot;:&quot;00000000000004PY&quot;,&quot;name&quot;:&quot;起点&quot;,&quot;x0&quot;:38.5,&quot;y0&quot;:60.5,&quot;x1&quot;:86.5,&quot;y1&quot;:108.5,&quot;description&quot;:null,&quot;isParallelOutput&quot;:0,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;inputs&quot;:[],&quot;outputs&quot;:[{&quot;id&quot;:&quot;00000000000004Pd&quot;,&quot;name&quot;:&quot;连接0&quot;,&quot;orderNumber&quot;:0,&quot;description&quot;:null,&quot;status&quot;:0,&quot;x0&quot;:0,&quot;y0&quot;:0,&quot;x1&quot;:0,&quot;y1&quot;:0,&quot;source&quot;:&quot;00000000000004PY&quot;,&quot;target&quot;:&quot;00000000000004PZ&quot;,&quot;navigationRule&quot;:null,&quot;alwaysTrue&quot;:true,&quot;bendpoints&quot;:null,&quot;selected&quot;:false,&quot;points&quot;:[],&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;a&quot;:null,&quot;b&quot;:null,&quot;c&quot;:null}],&quot;accessibleVars&quot;:[{&quot;varId&quot;:&quot;48F1C0BB58D46F4D8476CA30098C1648&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;currentProcess&quot;},{&quot;varId&quot;:&quot;9FFF098856DA2343A876BAF211D9980C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;oid&quot;},{&quot;varId&quot;:&quot;112BF7F620407845B8077730582EE22C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;owner&quot;},{&quot;varId&quot;:&quot;BB5875755869D9479418491A54AA6495&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;id&quot;},{&quot;varId&quot;:&quot;0A47385CAB7DCE42BCE79A76CC8BB166&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifyTime&quot;},{&quot;varId&quot;:&quot;CBF8B1C49FCC644EBEE876B0F7173947&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifier&quot;},{&quot;varId&quot;:&quot;858ED67DB814E942B44253D56CB978E4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;createTime&quot;},{&quot;varId&quot;:&quot;CD07BB3F4972C6428E01F4FB60FB043F&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;creator&quot;},{&quot;varId&quot;:&quot;B90F71C9D2788840ADE58F356FFC0BA4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woAsset&quot;},{&quot;varId&quot;:&quot;F392444D9432494A80CA2818FC616DB3&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woPart&quot;},{&quot;varId&quot;:&quot;CA474A3C50CD934889C9E19E47D09D53&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woTitle&quot;},{&quot;varId&quot;:&quot;74BCC0B41720F64C8D529E9F896BF53C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDesc&quot;},{&quot;varId&quot;:&quot;EB9F91A948C58E4CAF05C81B0167F299&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woState&quot;},{&quot;varId&quot;:&quot;0B33C2CCE9C49A4CAA922423DC3209D8&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woEngineer&quot;},{&quot;varId&quot;:&quot;240D9C54E2AD2C4AA94BE3885F2E8336&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDeadline&quot;}],&quot;marks&quot;:[],&quot;classtypename&quot;:&quot;StartPoint&quot;,&quot;lastupdate&quot;:&quot;2019-12-31 10:46:29&quot;,&quot;status&quot;:0,&quot;launchUIType&quot;:0,&quot;launchFormContent&quot;:null,&quot;launchFormName&quot;:&quot;&quot;,&quot;launchUIUrl&quot;:null,&quot;startOperation&quot;:null},{&quot;id&quot;:&quot;00000000000004PZ&quot;,&quot;name&quot;:&quot;下单&quot;,&quot;x0&quot;:160.5,&quot;y0&quot;:22.5,&quot;x1&quot;:328.5,&quot;y1&quot;:150.5,&quot;status&quot;:0,&quot;description&quot;:null,&quot;isParallelInput&quot;:0,&quot;isParallelOutput&quot;:0,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;inputs&quot;:[],&quot;outputs&quot;:[{&quot;id&quot;:&quot;00000000000004Pe&quot;,&quot;name&quot;:&quot;连接0&quot;,&quot;orderNumber&quot;:0,&quot;description&quot;:null,&quot;status&quot;:0,&quot;x0&quot;:0,&quot;y0&quot;:0,&quot;x1&quot;:0,&quot;y1&quot;:0,&quot;source&quot;:&quot;00000000000004PZ&quot;,&quot;target&quot;:&quot;00000000000004Pa&quot;,&quot;navigationRule&quot;:&quot;V@EB9F91A948C58E4CAF05C81B0167F299@DataVariable#==#C@String@已创建&quot;,&quot;alwaysTrue&quot;:false,&quot;bendpoints&quot;:null,&quot;selected&quot;:false,&quot;points&quot;:[],&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;a&quot;:null,&quot;b&quot;:null,&quot;c&quot;:null},{&quot;id&quot;:&quot;00000000000004Pf&quot;,&quot;name&quot;:&quot;连接1&quot;,&quot;orderNumber&quot;:1,&quot;description&quot;:null,&quot;status&quot;:0,&quot;x0&quot;:0,&quot;y0&quot;:0,&quot;x1&quot;:0,&quot;y1&quot;:0,&quot;source&quot;:&quot;00000000000004PZ&quot;,&quot;target&quot;:&quot;00000000000004Pb&quot;,&quot;navigationRule&quot;:&quot;V@EB9F91A948C58E4CAF05C81B0167F299@DataVariable#!=#C@String@已创建&quot;,&quot;alwaysTrue&quot;:false,&quot;bendpoints&quot;:null,&quot;selected&quot;:false,&quot;points&quot;:[],&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;a&quot;:null,&quot;b&quot;:null,&quot;c&quot;:null}],&quot;marks&quot;:[],&quot;classtypename&quot;:&quot;ManualTask&quot;,&quot;lastupdate&quot;:&quot;2019-12-27 16:30:27&quot;,&quot;accessibleVars&quot;:[{&quot;varId&quot;:&quot;48F1C0BB58D46F4D8476CA30098C1648&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;currentProcess&quot;},{&quot;varId&quot;:&quot;9FFF098856DA2343A876BAF211D9980C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;oid&quot;},{&quot;varId&quot;:&quot;112BF7F620407845B8077730582EE22C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;owner&quot;},{&quot;varId&quot;:&quot;BB5875755869D9479418491A54AA6495&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;id&quot;},{&quot;varId&quot;:&quot;0A47385CAB7DCE42BCE79A76CC8BB166&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifyTime&quot;},{&quot;varId&quot;:&quot;CBF8B1C49FCC644EBEE876B0F7173947&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifier&quot;},{&quot;varId&quot;:&quot;858ED67DB814E942B44253D56CB978E4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;createTime&quot;},{&quot;varId&quot;:&quot;CD07BB3F4972C6428E01F4FB60FB043F&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;creator&quot;},{&quot;varId&quot;:&quot;B90F71C9D2788840ADE58F356FFC0BA4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woAsset&quot;},{&quot;varId&quot;:&quot;F392444D9432494A80CA2818FC616DB3&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woPart&quot;},{&quot;varId&quot;:&quot;CA474A3C50CD934889C9E19E47D09D53&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woTitle&quot;},{&quot;varId&quot;:&quot;74BCC0B41720F64C8D529E9F896BF53C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDesc&quot;},{&quot;varId&quot;:&quot;EB9F91A948C58E4CAF05C81B0167F299&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woState&quot;},{&quot;varId&quot;:&quot;0B33C2CCE9C49A4CAA922423DC3209D8&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woEngineer&quot;},{&quot;varId&quot;:&quot;240D9C54E2AD2C4AA94BE3885F2E8336&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDeadline&quot;}],&quot;participants&quot;:[{&quot;participantType&quot;:&quot;launcher&quot;,&quot;name&quot;:&quot;&quot;,&quot;oid&quot;:&quot;&quot;}],&quot;deadlineDays&quot;:-1,&quot;alarmDays&quot;:-1,&quot;alarmFrequency&quot;:0,&quot;alarmMethod&quot;:0,&quot;uiType&quot;:0,&quot;uiUrl&quot;:null,&quot;formContent&quot;:null,&quot;formName&quot;:&quot;SingleWO&quot;,&quot;beforeOperation&quot;:null,&quot;afterOperation&quot;:null,&quot;expiryHandlerWfProcessId&quot;:null},{&quot;id&quot;:&quot;00000000000004Pa&quot;,&quot;name&quot;:&quot;执行&quot;,&quot;x0&quot;:387.5,&quot;y0&quot;:15.5,&quot;x1&quot;:555.5,&quot;y1&quot;:143.5,&quot;status&quot;:0,&quot;description&quot;:null,&quot;isParallelInput&quot;:0,&quot;isParallelOutput&quot;:0,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;inputs&quot;:[],&quot;outputs&quot;:[{&quot;id&quot;:&quot;00000000000004Pg&quot;,&quot;name&quot;:&quot;连接0&quot;,&quot;orderNumber&quot;:0,&quot;description&quot;:null,&quot;status&quot;:0,&quot;x0&quot;:0,&quot;y0&quot;:0,&quot;x1&quot;:0,&quot;y1&quot;:0,&quot;source&quot;:&quot;00000000000004Pa&quot;,&quot;target&quot;:&quot;00000000000004Pb&quot;,&quot;navigationRule&quot;:null,&quot;alwaysTrue&quot;:true,&quot;bendpoints&quot;:null,&quot;selected&quot;:false,&quot;points&quot;:[],&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;a&quot;:null,&quot;b&quot;:null,&quot;c&quot;:null}],&quot;marks&quot;:[],&quot;classtypename&quot;:&quot;ManualTask&quot;,&quot;lastupdate&quot;:1577937491554,&quot;accessibleVars&quot;:[{&quot;varId&quot;:&quot;48F1C0BB58D46F4D8476CA30098C1648&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;currentProcess&quot;},{&quot;varId&quot;:&quot;9FFF098856DA2343A876BAF211D9980C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;oid&quot;},{&quot;varId&quot;:&quot;112BF7F620407845B8077730582EE22C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;owner&quot;},{&quot;varId&quot;:&quot;BB5875755869D9479418491A54AA6495&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;id&quot;},{&quot;varId&quot;:&quot;0A47385CAB7DCE42BCE79A76CC8BB166&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifyTime&quot;},{&quot;varId&quot;:&quot;CBF8B1C49FCC644EBEE876B0F7173947&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifier&quot;},{&quot;varId&quot;:&quot;858ED67DB814E942B44253D56CB978E4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;createTime&quot;},{&quot;varId&quot;:&quot;CD07BB3F4972C6428E01F4FB60FB043F&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;creator&quot;},{&quot;varId&quot;:&quot;B90F71C9D2788840ADE58F356FFC0BA4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woAsset&quot;},{&quot;varId&quot;:&quot;F392444D9432494A80CA2818FC616DB3&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woPart&quot;},{&quot;varId&quot;:&quot;CA474A3C50CD934889C9E19E47D09D53&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woTitle&quot;},{&quot;varId&quot;:&quot;74BCC0B41720F64C8D529E9F896BF53C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDesc&quot;},{&quot;varId&quot;:&quot;EB9F91A948C58E4CAF05C81B0167F299&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woState&quot;},{&quot;varId&quot;:&quot;0B33C2CCE9C49A4CAA922423DC3209D8&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woEngineer&quot;},{&quot;varId&quot;:&quot;240D9C54E2AD2C4AA94BE3885F2E8336&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDeadline&quot;}],&quot;participants&quot;:[{&quot;participantType&quot;:&quot;group&quot;,&quot;name&quot;:&quot;维修工程师&quot;,&quot;oid&quot;:&quot;${lsuserGroup}&quot;}],&quot;deadlineDays&quot;:-1,&quot;alarmDays&quot;:-1,&quot;alarmFrequency&quot;:0,&quot;alarmMethod&quot;:0,&quot;uiType&quot;:0,&quot;uiUrl&quot;:null,&quot;formContent&quot;:null,&quot;formName&quot;:&quot;SingleWO&quot;,&quot;beforeOperation&quot;:null,&quot;afterOperation&quot;:null,&quot;expiryHandlerWfProcessId&quot;:null},{&quot;id&quot;:&quot;00000000000004Pb&quot;,&quot;name&quot;:&quot;存档&quot;,&quot;x0&quot;:394.5,&quot;y0&quot;:162.5,&quot;x1&quot;:562.5,&quot;y1&quot;:290.5,&quot;status&quot;:0,&quot;description&quot;:null,&quot;isParallelInput&quot;:0,&quot;isParallelOutput&quot;:0,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;inputs&quot;:[],&quot;outputs&quot;:[{&quot;id&quot;:&quot;00000000000004Ph&quot;,&quot;name&quot;:&quot;连接0&quot;,&quot;orderNumber&quot;:0,&quot;description&quot;:null,&quot;status&quot;:0,&quot;x0&quot;:0,&quot;y0&quot;:0,&quot;x1&quot;:0,&quot;y1&quot;:0,&quot;source&quot;:&quot;00000000000004Pb&quot;,&quot;target&quot;:&quot;00000000000004Pc&quot;,&quot;navigationRule&quot;:null,&quot;alwaysTrue&quot;:true,&quot;bendpoints&quot;:null,&quot;selected&quot;:false,&quot;points&quot;:[],&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;a&quot;:null,&quot;b&quot;:null,&quot;c&quot;:null}],&quot;marks&quot;:[],&quot;classtypename&quot;:&quot;ManualTask&quot;,&quot;lastupdate&quot;:1577937499443,&quot;accessibleVars&quot;:[{&quot;varId&quot;:&quot;48F1C0BB58D46F4D8476CA30098C1648&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;currentProcess&quot;},{&quot;varId&quot;:&quot;9FFF098856DA2343A876BAF211D9980C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;oid&quot;},{&quot;varId&quot;:&quot;112BF7F620407845B8077730582EE22C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;owner&quot;},{&quot;varId&quot;:&quot;BB5875755869D9479418491A54AA6495&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;id&quot;},{&quot;varId&quot;:&quot;0A47385CAB7DCE42BCE79A76CC8BB166&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifyTime&quot;},{&quot;varId&quot;:&quot;CBF8B1C49FCC644EBEE876B0F7173947&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifier&quot;},{&quot;varId&quot;:&quot;858ED67DB814E942B44253D56CB978E4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;createTime&quot;},{&quot;varId&quot;:&quot;CD07BB3F4972C6428E01F4FB60FB043F&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;creator&quot;},{&quot;varId&quot;:&quot;B90F71C9D2788840ADE58F356FFC0BA4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woAsset&quot;},{&quot;varId&quot;:&quot;F392444D9432494A80CA2818FC616DB3&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woPart&quot;},{&quot;varId&quot;:&quot;CA474A3C50CD934889C9E19E47D09D53&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woTitle&quot;},{&quot;varId&quot;:&quot;74BCC0B41720F64C8D529E9F896BF53C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDesc&quot;},{&quot;varId&quot;:&quot;EB9F91A948C58E4CAF05C81B0167F299&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woState&quot;},{&quot;varId&quot;:&quot;0B33C2CCE9C49A4CAA922423DC3209D8&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woEngineer&quot;},{&quot;varId&quot;:&quot;240D9C54E2AD2C4AA94BE3885F2E8336&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDeadline&quot;}],&quot;participants&quot;:[{&quot;participantType&quot;:&quot;user&quot;,&quot;name&quot;:&quot;王五&quot;,&quot;oid&quot;:&quot;${wwuserId}&quot;}],&quot;deadlineDays&quot;:-1,&quot;alarmDays&quot;:-1,&quot;alarmFrequency&quot;:0,&quot;alarmMethod&quot;:0,&quot;uiType&quot;:0,&quot;uiUrl&quot;:null,&quot;formContent&quot;:null,&quot;formName&quot;:&quot;SingleWO&quot;,&quot;beforeOperation&quot;:null,&quot;afterOperation&quot;:null,&quot;expiryHandlerWfProcessId&quot;:null},{&quot;id&quot;:&quot;00000000000004Pc&quot;,&quot;name&quot;:&quot;终点&quot;,&quot;x0&quot;:648.5,&quot;y0&quot;:196.5,&quot;x1&quot;:696.5,&quot;y1&quot;:244.5,&quot;status&quot;:0,&quot;description&quot;:null,&quot;isParallelInput&quot;:0,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;inputs&quot;:[],&quot;outputs&quot;:[],&quot;accessibleVars&quot;:[{&quot;varId&quot;:&quot;48F1C0BB58D46F4D8476CA30098C1648&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;currentProcess&quot;},{&quot;varId&quot;:&quot;9FFF098856DA2343A876BAF211D9980C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;oid&quot;},{&quot;varId&quot;:&quot;112BF7F620407845B8077730582EE22C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;owner&quot;},{&quot;varId&quot;:&quot;BB5875755869D9479418491A54AA6495&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;id&quot;},{&quot;varId&quot;:&quot;0A47385CAB7DCE42BCE79A76CC8BB166&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifyTime&quot;},{&quot;varId&quot;:&quot;CBF8B1C49FCC644EBEE876B0F7173947&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;lastModifier&quot;},{&quot;varId&quot;:&quot;858ED67DB814E942B44253D56CB978E4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;createTime&quot;},{&quot;varId&quot;:&quot;CD07BB3F4972C6428E01F4FB60FB043F&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;creator&quot;},{&quot;varId&quot;:&quot;B90F71C9D2788840ADE58F356FFC0BA4&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woAsset&quot;},{&quot;varId&quot;:&quot;F392444D9432494A80CA2818FC616DB3&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woPart&quot;},{&quot;varId&quot;:&quot;CA474A3C50CD934889C9E19E47D09D53&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woTitle&quot;},{&quot;varId&quot;:&quot;74BCC0B41720F64C8D529E9F896BF53C&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDesc&quot;},{&quot;varId&quot;:&quot;EB9F91A948C58E4CAF05C81B0167F299&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woState&quot;},{&quot;varId&quot;:&quot;0B33C2CCE9C49A4CAA922423DC3209D8&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woEngineer&quot;},{&quot;varId&quot;:&quot;240D9C54E2AD2C4AA94BE3885F2E8336&quot;,&quot;accessControl&quot;:1,&quot;currOwner&quot;:&quot;00000000000004PR&quot;,&quot;owner&quot;:&quot;&quot;,&quot;classtypename&quot;:&quot;AccessibleVariable&quot;,&quot;componentId&quot;:&quot;woDeadline&quot;}],&quot;marks&quot;:[],&quot;classtypename&quot;:&quot;EndPoint&quot;,&quot;lastupdate&quot;:&quot;2019-12-27 16:28:58&quot;,&quot;endUIType&quot;:0,&quot;endUIUrl&quot;:null,&quot;endFormContent&quot;:null,&quot;endFormName&quot;:&quot;MultiWO&quot;,&quot;endOperation&quot;:null}],&quot;classtypename&quot;:&quot;WfProcess&quot;,&quot;status&quot;:0,&quot;bindEnClassName&quot;:&quot;${className}&quot;,&quot;proprietors&quot;:null}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain"></stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol"></stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/buildtime/save-process-template</stringProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="723337899">&quot;code&quot;:200</stringProp>
-              <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
-              <stringProp name="1269965985">&quot;message&quot;:&quot;OK&quot;</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-          </ResponseAssertion>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_17发布一个流程流程模版（无表单）" enabled="true">
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&#xd;
-	&quot;templateId&quot;:&quot;${templateId1}&quot;,&#xd;
-	&quot;version&quot;:&quot;2.0&quot;,&#xd;
-	&quot;description&quot;:&quot;开始节点无起始表单&quot;,&#xd;
-	&quot;releaser&quot;:&quot;admin&quot;,&#xd;
-	&quot;releaserId&quot;:&quot;9C92E891E9AE534DB685737DE467A9D0&quot;&#xd;
-	}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain"></stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol"></stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">dwf/v1/workflow/buildtime/release-process-template</stringProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="723337899">&quot;code&quot;:200</stringProp>
-              <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
-              <stringProp name="-145575042">&quot;data&quot;:&quot;${reltemplateId2}&quot;</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="reltemplateId2提取器" enabled="true">
-            <stringProp name="JSONPostProcessor.referenceNames">reltemplateId2</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data</stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
-          </JSONPostProcessor>
-          <hashTree/>
-          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="reltemplateId2 后置处理程序" enabled="true">
-            <boolProp name="resetInterpreter">false</boolProp>
-            <stringProp name="parameters">${reltemplateId2}</stringProp>
-            <stringProp name="filename"></stringProp>
-            <stringProp name="script">${__setProperty(reltemplateId2,${reltemplateId2},)}</stringProp>
           </BeanShellPostProcessor>
           <hashTree/>
         </hashTree>
@@ -3650,7 +3650,7 @@ ${__setProperty(module3,${module3},)}</stringProp>
             <collectionProp name="Asserion.test_strings">
               <stringProp name="723337899">&quot;code&quot;:200</stringProp>
               <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
-              <stringProp name="1034107984">&quot;name&quot;:&quot;工单管理&quot;</stringProp>
+              <stringProp name="1034787845">&quot;name&quot;:&quot;工单维护&quot;</stringProp>
               <stringProp name="-397211262">&quot;bindEnClassName&quot;:&quot;${className}&quot;</stringProp>
               <stringProp name="0"></stringProp>
               <stringProp name="0"></stringProp>
@@ -3791,7 +3791,7 @@ ${__setProperty(module3,${module3},)}</stringProp>
             <stringProp name="Assertion.custom_message"></stringProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="reltemplateId断言" enabled="true">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="reltemplateId2断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="1956972077">&quot;id&quot;:&quot;${reltemplateId2}&quot;</stringProp>
             </collectionProp>
@@ -3803,8 +3803,8 @@ ${__setProperty(module3,${module3},)}</stringProp>
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="version断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="-17275037">&quot;version&quot;:&quot;1.0&quot;</stringProp>
-              <stringProp name="-1762810378">&quot;description&quot;:&quot;测试发布&quot;</stringProp>
+              <stringProp name="-17245246">&quot;version&quot;:&quot;2.0&quot;</stringProp>
+              <stringProp name="-785514701">&quot;description&quot;:&quot;开始节点无起始表单&quot;</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -3857,7 +3857,7 @@ ${__setProperty(module3,${module3},)}</stringProp>
             <stringProp name="Assertion.custom_message"></stringProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="reltemplateId断言" enabled="true">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="reltemplateId1断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="1956971116">&quot;id&quot;:&quot;${reltemplateId1}&quot;</stringProp>
             </collectionProp>
@@ -3871,6 +3871,72 @@ ${__setProperty(module3,${module3},)}</stringProp>
             <collectionProp name="Asserion.test_strings">
               <stringProp name="-17275037">&quot;version&quot;:&quot;1.0&quot;</stringProp>
               <stringProp name="-1762810378">&quot;description&quot;:&quot;测试发布&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_20_4获取ww的已发布的流程模版列表" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/administrate/released-process-templates/${wwuserId}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="data断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+              <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
+              <stringProp name="1034107984">&quot;name&quot;:&quot;工单管理&quot;</stringProp>
+              <stringProp name="-397211262">&quot;bindEnClassName&quot;:&quot;${className}&quot;</stringProp>
+              <stringProp name="0"></stringProp>
+              <stringProp name="0"></stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="reltemplateId1断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1956972077">&quot;id&quot;:&quot;${reltemplateId2}&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="version断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-17245246">&quot;version&quot;:&quot;2.0&quot;</stringProp>
+              <stringProp name="-785514701">&quot;description&quot;:&quot;开始节点无起始表单&quot;</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -8398,9 +8464,13 @@ for (int i = 0; i &lt; photoArray.size(); i++) {
             <stringProp name="317140671">zsuserId</stringProp>
             <stringProp name="565942497">wfProcessInstanceId1</stringProp>
             <stringProp name="-9888733">className</stringProp>
+            <stringProp name="1457612131">reltemplateId1</stringProp>
+            <stringProp name="1457612132">reltemplateId2</stringProp>
+            <stringProp name="1769621404">templateId1</stringProp>
+            <stringProp name="1769621405">templateId2</stringProp>
           </collectionProp>
           <collectionProp name="UserParameters.thread_values">
-            <collectionProp name="-1923403697">
+            <collectionProp name="367221453">
               <stringProp name="194542487">${__property(lsuserId,)}</stringProp>
               <stringProp name="662350626">${__property(wfProcessInstanceId2,)}</stringProp>
               <stringProp name="-1522755294">9C92E891E9AE534DB685737DE467A9D0</stringProp>
@@ -8412,6 +8482,10 @@ for (int i = 0; i &lt; photoArray.size(); i++) {
               <stringProp name="807027237">${__property(zsuserId,)}</stringProp>
               <stringProp name="662320835">${__property(wfProcessInstanceId1,)}</stringProp>
               <stringProp name="-1215319395">WorkOrder</stringProp>
+              <stringProp name="-345551359">${__property(reltemplateId1,)}</stringProp>
+              <stringProp name="-345521568">${__property(reltemplateId2,)}</stringProp>
+              <stringProp name="518555744">${__property(templateId1,)}</stringProp>
+              <stringProp name="518585535">${__property(templateId2,)}</stringProp>
             </collectionProp>
           </collectionProp>
           <boolProp name="UserParameters.per_iteration">false</boolProp>
@@ -8529,7 +8603,427 @@ for (int i = 0; i &lt; photoArray.size(); i++) {
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_80删除绑定某类的所有模版及实例" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_80ww删除一个已发布的流程模版（ls-reltemplateId1）" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/buildtime/delete-released-template/${reltemplateId1}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723339821">&quot;code&quot;:400</stringProp>
+              <stringProp name="184708874">&quot;success&quot;:false</stringProp>
+              <stringProp name="-654368432">&quot;message&quot;:&quot;用户未拥有模版删除权限&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_81ww删除一个已发布不存在流程模版（ls-reltemplateId1）" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/buildtime/delete-released-template/${reltemplateId1}1</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723339821">&quot;code&quot;:400</stringProp>
+              <stringProp name="184708874">&quot;success&quot;:false</stringProp>
+              <stringProp name="794916972">&quot;message&quot;:&quot;该模版不存在&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_82ww删除一个已发布存在流程模版（ww-reltemplateId2）" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/buildtime/delete-released-template/${reltemplateId2}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+              <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
+              <stringProp name="1269965985">&quot;message&quot;:&quot;OK&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_83ww删除一个已发布null流程模版" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/buildtime/delete-released-template/null</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723339821">&quot;code&quot;:400</stringProp>
+              <stringProp name="184708874">&quot;success&quot;:false</stringProp>
+              <stringProp name="794916972">&quot;message&quot;:&quot;该模版不存在&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_84ww删除一个已发布NULL流程模版" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/buildtime/delete-released-template/NULL</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723339821">&quot;code&quot;:400</stringProp>
+              <stringProp name="184708874">&quot;success&quot;:false</stringProp>
+              <stringProp name="794916972">&quot;message&quot;:&quot;该模版不存在&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_85ww删除一个未发布流程模版（ls）" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/buildtime/delete-process-template/${templateId1}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723339821">&quot;code&quot;:400</stringProp>
+              <stringProp name="184708874">&quot;success&quot;:false</stringProp>
+              <stringProp name="-654368432">&quot;message&quot;:&quot;用户未拥有模版删除权限&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_86ww删除一个未发布不存在流程模版" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/buildtime/delete-process-template/${templateId1}1</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723339821">&quot;code&quot;:400</stringProp>
+              <stringProp name="184708874">&quot;success&quot;:false</stringProp>
+              <stringProp name="794916972">&quot;message&quot;:&quot;该模版不存在&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_87ww删除一个未发布存在且有权限流程模版" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/buildtime/delete-process-template/${templateId2}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+              <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
+              <stringProp name="1269965985">&quot;message&quot;:&quot;OK&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_88ww删除一个未发布不存在null流程模版" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/buildtime/delete-process-template/null</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723339821">&quot;code&quot;:400</stringProp>
+              <stringProp name="184708874">&quot;success&quot;:false</stringProp>
+              <stringProp name="794916972">&quot;message&quot;:&quot;该模版不存在&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_89ww删除一个未发布不存在NULL流程模版" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/workflow/buildtime/delete-process-template/NULL</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="723339821">&quot;code&quot;:400</stringProp>
+              <stringProp name="184708874">&quot;success&quot;:false</stringProp>
+              <stringProp name="794916972">&quot;message&quot;:&quot;该模版不存在&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="状态码断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_90删除绑定某类的所有模版及实例" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -8577,7 +9071,7 @@ for (int i = 0; i &lt; photoArray.size(); i++) {
           <boolProp name="displaySystemProperties">false</boolProp>
         </DebugSampler>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_81检查某类是否有正在运行的实例N" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wf_91检查某类是否有正在运行的实例N" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
