@@ -215,7 +215,7 @@
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
           <stringProp name="HTTPSampler.path">/dwf/v1/part/uploadPart</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -284,7 +284,7 @@ vars.put(&quot;note&quot;,encode_note);
           <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="正则表达式提取器" enabled="true">
             <stringProp name="RegexExtractor.useHeaders">false</stringProp>
             <stringProp name="RegexExtractor.refname">partName</stringProp>
-            <stringProp name="RegexExtractor.regex">\\&quot;ModelPackageName\\&quot;:\\&quot;(.+?)\\&quot;</stringProp>
+            <stringProp name="RegexExtractor.regex">插件包(.+?)释放成功</stringProp>
             <stringProp name="RegexExtractor.template">$1$</stringProp>
             <stringProp name="RegexExtractor.default"></stringProp>
             <stringProp name="RegexExtractor.match_number">1</stringProp>
@@ -352,6 +352,8 @@ for(int i=0; i&lt;infoArrays.length(); i++){  
 	int status = responseInfo.getInt(&quot;status&quot;);
 	String cname = responseInfo.getString(&quot;cname&quot;);
 	String note = responseInfo.getString(&quot;note&quot;);
+	log.info(&quot;vnote-----&quot;+vnote);
+	log.info(&quot;解析后-----&quot;+note);
 	if(partName.equals(name)&amp;&amp;status==0&amp;&amp;vcname.equals(cname)&amp;&amp;vnote.equals(note)){
 		flag = true;
     		break; 
