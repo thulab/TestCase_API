@@ -1427,7 +1427,7 @@
             <collectionProp name="Asserion.test_strings">
               <stringProp name="51508">400</stringProp>
               <stringProp name="184708874">&quot;success&quot;:false</stringProp>
-              <stringProp name="1332897079">无法为类Component创建视图: 已存在名为${componentName}、设备类型为PC的自定义视图</stringProp>
+              <stringProp name="-728048685">无法为类Component创建视图: 已存在名为${componentName}、表单类型为PC的自定义视图</stringProp>
             </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
