@@ -35,6 +35,7 @@
         <stringProp name="HTTPSampler.protocol">http</stringProp>
         <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
         <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="TestPlan.comments">${ipAddress}</stringProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
       </ConfigTestElement>
       <hashTree/>
@@ -13413,7 +13414,7 @@
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="MCCE_25_S05_attributes-delete/attributesName" enabled="false">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="MCCE_25_S05_attributes-delete/attributesName" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>

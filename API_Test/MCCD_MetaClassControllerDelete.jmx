@@ -1419,8 +1419,8 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="MCCD_05_级联删除_属性" enabled="true">
-        <stringProp name="TestPlan.comments">级联删除关联类,表单(视图),授权项,属性(其他类未使用)</stringProp>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="MCCD_05_级联删除_属性" enabled="false">
+        <stringProp name="TestPlan.comments">级联删除关联类,表单(视图),授权项,属性(其他类未使用)；属性库和类没有关系了，删除类不会级联删除属性</stringProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
