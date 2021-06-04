@@ -5759,6 +5759,7 @@ vars.put(&quot;uuid1&quot;,(uuid1.toString()).toUpperCase().replaceAll(&quot;-&q
 {&#xd;
 	&quot;serverPort&quot;: 5432,&#xd;
 	&quot;dataSourceName&quot;: &quot;Jmeter${__time(,)}&quot;,&#xd;
+	&quot;displayName&quot;:&quot;中文&quot;,&#xd;
 	&quot;dataSourceType&quot;: &quot;POSTGRESQL&quot;,&#xd;
 	&quot;serverIp&quot;: &quot;${ipAddress}&quot;,&#xd;
 	&quot;userName&quot;: &quot;postgres&quot;,&#xd;

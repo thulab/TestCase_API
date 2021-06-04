@@ -295,6 +295,7 @@
 {&#xd;
 	&quot;serverPort&quot;: 5432,&#xd;
 	&quot;dataSourceName&quot;: &quot;Jmeter${__time(,)}&quot;,&#xd;
+	&quot;displayName&quot;:&quot;中文名称&quot;,&#xd;
 	&quot;dataSourceType&quot;: &quot;POSTGRESQL&quot;,&#xd;
 	&quot;serverIp&quot;: &quot;${ipAddress}&quot;,&#xd;
 	&quot;userName&quot;: &quot;postgres&quot;,&#xd;
@@ -396,7 +397,8 @@
 {&#xd;
 	 &quot;oid&quot;: &quot;${oid}&quot;,&#xd;
 	&quot;serverPort&quot;: 5432,&#xd;
-	&quot;dataSourceName&quot;: &quot;update${__time(,)}&quot;,&#xd;
+	&quot;dataSourceName&quot;: &quot;${dataSourceName}&quot;,&#xd;
+	&quot;displayName&quot;:&quot;中文名称改&quot;,&#xd;
 	&quot;dataSourceType&quot;: &quot;POSTGRESQL&quot;,&#xd;
 	&quot;serverIp&quot;: &quot;${ipAddress}&quot;,&#xd;
 	&quot;userName&quot;: &quot;postgres&quot;,&#xd;
@@ -975,6 +977,7 @@
 {&#xd;
 	&quot;serverPort&quot;: 5432,&#xd;
 	&quot;dataSourceName&quot;: &quot;Jmeter${__time(,)}&quot;,&#xd;
+	&quot;displayName&quot;:&quot;中文名称&quot;,&#xd;
 	&quot;dataSourceType&quot;: &quot;POSTGRESQL&quot;,&#xd;
 	&quot;serverIp&quot;: &quot;${ipAddress}&quot;,&#xd;
 	&quot;userName&quot;: &quot;postgres&quot;,&#xd;
