@@ -2842,6 +2842,21 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="fType_1" elementType="Argument">
+              <stringProp name="Argument.name">fType_1</stringProp>
+              <stringProp name="Argument.value">PC</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="fType_2" elementType="Argument">
+              <stringProp name="Argument.name">fType_2</stringProp>
+              <stringProp name="Argument.value">Mobile</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="MVC_03_S01_entities_create" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -3440,6 +3455,250 @@
               <stringProp name="TestPlan.comments">目前此接口只支持类型actPc，去掉验证</stringProp>
             </ResponseAssertion>
             <hashTree/>
+          </hashTree>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach控制器" enabled="true">
+            <stringProp name="ForeachController.inputVal">fType</stringProp>
+            <stringProp name="ForeachController.returnVal">formType</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+            <stringProp name="ForeachController.startIndex">0</stringProp>
+            <stringProp name="ForeachController.endIndex">2</stringProp>
+          </ForeachController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="MVC_03_S03_${__counter(TRUE,)}_创建视图_mobile" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">&#xd;
+[&#xd;
+    {&#xd;
+        &quot;className&quot;:&quot;${className}&quot;,&#xd;
+        &quot;hasThumbnail&quot;:false,&#xd;
+        &quot;v3Content&quot;:&quot;{\&quot;data\&quot;:{\&quot;elements\&quot;:[],\&quot;targetClass\&quot;:\&quot;data\&quot;,\&quot;isRelation\&quot;:false,\&quot;basicArgs\&quot;:{},\&quot;deviceType\&quot;:\&quot;actPc\&quot;}}&quot;,&#xd;
+        &quot;viewName&quot;:&quot;view_${formType}&quot;,&#xd;
+        &quot;displayName&quot;:&quot;中文&quot;,&#xd;
+        &quot;note&quot;:&quot;备注&quot;,&#xd;
+        &quot;isRelation&quot;:false,&#xd;
+        &quot;deviceType&quot;:&quot;${deviceType}&quot;,&#xd;
+        &quot;formType&quot;:&quot;${formType}&quot;,&#xd;
+        &quot;basicInfo&quot;:&quot;&quot;,&#xd;
+        &quot;widgetAnnotation&quot;:&quot;&quot;&#xd;
+    }&#xd;
+]</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/dwf/v1/meta/views-create</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="TestPlan.comments">分别创建不同类型的视图</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="oid提取" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">moid</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.data[0]</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ResponseCode200" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="BodyCode200" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="message" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="1269965985">&quot;message&quot;:&quot;OK&quot;</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="success:true" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="data" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1228566492">&quot;data&quot;:</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="MVC_03_S03_${__counter(TRUE,)}_查询视图_type/${formType}" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/dwf/v1/meta/class/${className}/views/view_${formType}/devices/${deviceType}/type/${formType}</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="TestPlan.comments">根据类名、视图名、设备类型和表单类型获取非默认视图详细信息</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ResponseCode200" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="BodyCode200" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="message" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="468460733">&quot;message&quot;:</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="success:true" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="data" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1228566492">&quot;data&quot;:</stringProp>
+                  <stringProp name="203774908">&quot;viewName&quot;:&quot;view_${formType}&quot;</stringProp>
+                  <stringProp name="1243701051">&quot;oid&quot;:&quot;${moid}&quot;</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="MVC_03_S03_${__counter(TRUE,)}_删除视图" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/dwf/v1/meta/views-delete/${moid}</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ResponseCode200" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="BodyCode200" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="message" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="1269965985">&quot;message&quot;:&quot;OK&quot;</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="success:true" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
           </hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="MVC_03_S03_${__counter(TRUE,)}_根据视图id获取某个非默认视图" enabled="false">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
