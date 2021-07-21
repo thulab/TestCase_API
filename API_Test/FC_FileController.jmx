@@ -991,7 +991,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/dwf/v1/multifiles-upload?filename=t1e2x3t4.jpg</stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/multifile-upload?filename=t1e2x3t4.jpg</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>

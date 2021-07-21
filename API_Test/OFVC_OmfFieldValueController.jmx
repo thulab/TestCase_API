@@ -415,7 +415,7 @@
     &quot;displayName&quot;: &quot;jmeterAttribute&quot;,&#xd;
     &quot;id&quot;: &quot;&quot;,&#xd;
     &quot;nullable&quot;: true,&#xd;
-    &quot;valueLength&quot;: 50,&#xd;
+    &quot;valueLength&quot;: 1024,&#xd;
     &quot;valueType&quot;: &quot;LocalFile&quot;&#xd;
   }&#xd;
 ]</stringProp>
