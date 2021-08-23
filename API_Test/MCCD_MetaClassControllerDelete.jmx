@@ -1186,7 +1186,7 @@
   &quot;conditionExpre&quot;: &quot;serverScript&quot;,&#xd;
   &quot;displayName&quot;: &quot;${time}&quot;,&#xd;
   &quot;icon&quot;: &quot;ios-add&quot;,&#xd;
-  &quot;moduleName&quot;: &quot;${cls1}-&quot;,&#xd;
+  &quot;moduleName&quot;: &quot;${cls1}-*&quot;,&#xd;
   &quot;oid&quot;: &quot;string&quot;,&#xd;
   &quot;order&quot;: 0,&#xd;
   &quot;params&quot;: &quot;&quot;,&#xd;
@@ -1203,7 +1203,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/dwf/v1/meta/queryoperations-create</stringProp>
+          <stringProp name="HTTPSampler.path">/dwf/v1/meta/queryoperations-create?autoGenerateName=false</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
