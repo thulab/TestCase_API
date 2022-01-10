@@ -227,7 +227,6 @@
               <stringProp name="-218311542">&quot;dbScriptVer&quot;</stringProp>
               <stringProp name="498718022">&quot;dbLatestVer&quot;</stringProp>
               <stringProp name="-2135465568">&quot;dwfLatestTag&quot;</stringProp>
-              <stringProp name="1052524117">&quot;script&quot;</stringProp>
             </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
