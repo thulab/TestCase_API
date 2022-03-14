@@ -357,7 +357,7 @@
               <elementProp name="../data/test.jpg" elementType="HTTPFileArg">
                 <stringProp name="File.path">../data/test.jpg</stringProp>
                 <stringProp name="File.paramname">file</stringProp>
-                <stringProp name="File.mimetype">Content-Type: image/png</stringProp>
+                <stringProp name="File.mimetype">Content-Type: -F</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
