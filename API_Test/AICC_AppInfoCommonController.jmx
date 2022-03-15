@@ -24,7 +24,7 @@
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
           <collectionProp name="Arguments.arguments"/>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">192.168.31.81</stringProp>
+        <stringProp name="HTTPSampler.domain">${ipAddress}</stringProp>
         <stringProp name="HTTPSampler.port">9090</stringProp>
         <stringProp name="HTTPSampler.connect_timeout"></stringProp>
         <stringProp name="HTTPSampler.response_timeout"></stringProp>
@@ -205,7 +205,7 @@
           <hashTree/>
         </hashTree>
         <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Include Controller" enabled="true">
-          <stringProp name="IncludeController.includepath">C:\Program Files\apache-jmeter-3.1\data\登录.jmx</stringProp>
+          <stringProp name="IncludeController.includepath">../data/登录.jmx</stringProp>
           <stringProp name="TestPlan.comments">../data/登录.jmx</stringProp>
         </IncludeController>
         <hashTree/>
@@ -272,8 +272,8 @@
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AICC_02_01_theme-create" enabled="true">
           <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
             <collectionProp name="HTTPFileArgs.files">
-              <elementProp name="C:/Program Files/apache-jmeter-3.1/data/extendApp.css" elementType="HTTPFileArg">
-                <stringProp name="File.path">C:/Program Files/apache-jmeter-3.1/data/extendApp.css</stringProp>
+              <elementProp name="../data/extendApp.css" elementType="HTTPFileArg">
+                <stringProp name="File.path">../data/extendApp.css</stringProp>
                 <stringProp name="File.paramname">file</stringProp>
                 <stringProp name="File.mimetype">application/octet-stream</stringProp>
               </elementProp>
