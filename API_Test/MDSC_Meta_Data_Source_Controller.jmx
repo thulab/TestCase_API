@@ -404,7 +404,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;condition&quot;: &quot;select * from plt_cus_groupuser&quot;,&#xd;
+  &quot;condition&quot;: &quot;select * from plt_org_user&quot;,&#xd;
   &quot;pageSize&quot;: 10,&#xd;
   &quot;refs&quot;: [&#xd;
     {&#xd;
