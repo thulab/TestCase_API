@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Omf Iotdb Controller" enabled="true">
       <stringProp name="TestPlan.comments">iotdb</stringProp>
@@ -209,12 +209,12 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-	&quot;serverPort&quot;:6667,&#xd;
+	&quot;serverPort&quot;:6661,&#xd;
 	&quot;options&quot;:&quot;{\&quot;iotdbOptions\&quot;:{\&quot;rootPath\&quot;:\&quot;root.*\&quot;}}&quot;,&#xd;
 	&quot;dataSourceType&quot;:&quot;IOTDB&quot;,&#xd;
 	&quot;dataSourceName&quot;:&quot;${dataSourceNameIOTDB}&quot;,&#xd;
 	&quot;displayName&quot;:&quot;dataSourceNameIOTDB&quot;,&#xd;
-	&quot;serverIp&quot;:&quot;192.168.31.81&quot;,&#xd;
+	&quot;serverIp&quot;:&quot;192.168.31.10&quot;,&#xd;
 	&quot;userName&quot;:&quot;root&quot;,&#xd;
 	&quot;password&quot;:&quot;UFHcm9vdA==SC27g&quot;,&#xd;
 	&quot;dataBaseVersion&quot;:&quot;0.11&quot;&#xd;
