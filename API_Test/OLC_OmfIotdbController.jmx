@@ -251,7 +251,7 @@
             <boolProp name="UserParameters.per_iteration">false</boolProp>
           </UserParameters>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="success:true" enabled="true">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="success:true" enabled="false">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
             </collectionProp>
@@ -271,7 +271,7 @@
             <stringProp name="Assertion.custom_message"></stringProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="message:" enabled="true">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="message:" enabled="false">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="468460733">&quot;message&quot;:</stringProp>
             </collectionProp>
