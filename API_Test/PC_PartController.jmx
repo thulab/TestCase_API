@@ -15,7 +15,7 @@
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
           <collectionProp name="Arguments.arguments"/>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">10.101.64.12</stringProp>
+        <stringProp name="HTTPSampler.domain">${ipAddress}</stringProp>
         <stringProp name="HTTPSampler.port">7070</stringProp>
         <stringProp name="HTTPSampler.protocol">http</stringProp>
         <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
@@ -197,7 +197,7 @@
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">${__property(token)}</stringProp>
+                <stringProp name="Header.value">${__property(newtoken)}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
@@ -321,7 +321,7 @@ vars.put(&quot;note&quot;,encode_note);
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">${__property(token)}</stringProp>
+                <stringProp name="Header.value">${__property(newtoken)}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
@@ -978,7 +978,7 @@ if(flag){
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">${__property(token)}</stringProp>
+                <stringProp name="Header.value">${__property(newtoken)}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
@@ -1432,7 +1432,7 @@ if(flag==2){
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Authorization</stringProp>
-                  <stringProp name="Header.value">${__property(token)}</stringProp>
+                  <stringProp name="Header.value">${__property(newtoken)}</stringProp>
                 </elementProp>
               </collectionProp>
             </HeaderManager>
@@ -1544,7 +1544,7 @@ if(flag==2){
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">${__property(token)}</stringProp>
+                <stringProp name="Header.value">${__property(newtoken)}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
@@ -1753,7 +1753,7 @@ out.close();</stringProp>
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">${__property(token)}</stringProp>
+                <stringProp name="Header.value">${__property(newtoken)}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
@@ -2312,7 +2312,7 @@ if(flag){
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">${__property(token)}</stringProp>
+                <stringProp name="Header.value">${__property(newtoken)}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
@@ -2547,7 +2547,7 @@ vars.put(&quot;note&quot;,encode_note);
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PC_03_C04_part/assemble_查询装配区" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PC_03_C04_part/assemble_查询装配区新" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -2982,7 +2982,7 @@ if(flag){
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">${__property(token)}</stringProp>
+                <stringProp name="Header.value">${__property(newtoken)}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
@@ -3460,7 +3460,7 @@ if(flag==2){
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Authorization</stringProp>
-                  <stringProp name="Header.value">${__property(token)}</stringProp>
+                  <stringProp name="Header.value">${__property(newtoken)}</stringProp>
                 </elementProp>
               </collectionProp>
             </HeaderManager>
@@ -3572,7 +3572,7 @@ if(flag==2){
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">${__property(token)}</stringProp>
+                <stringProp name="Header.value">${__property(newtoken)}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
