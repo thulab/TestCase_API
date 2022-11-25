@@ -181,7 +181,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-    &quot;url&quot;:&quot;http://localhost:8888&quot;,&#xd;
+    &quot;url&quot;:&quot;http://${ipAddress}:8888&quot;,&#xd;
     &quot;username&quot;:&quot;${username}&quot;,&#xd;
     &quot;password&quot;:&quot;${__base64Encode(${password})}&quot;&#xd;
 }</stringProp>
@@ -210,7 +210,7 @@
               <stringProp name="1216985755">password</stringProp>
             </collectionProp>
             <collectionProp name="UserParameters.thread_values">
-              <collectionProp name="-1069086439">
+              <collectionProp name="-136920799">
                 <stringProp name="3079651">demo</stringProp>
                 <stringProp name="3079651">demo</stringProp>
               </collectionProp>
